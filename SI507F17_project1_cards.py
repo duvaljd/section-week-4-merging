@@ -48,11 +48,11 @@ class Deck(object):
         random.shuffle(self.cards)
 
     def replace_card(self, card):
-        card_strs = []  # forming an empty list
-        for c in self.cards:  # each card in self.cards (the initial list)
-            card_strs.append(c.__str__())  # appends the string that represents that card to the empty list
-        if card.__str__() not in card_strs:  # if the string representing this card is not in the list already
-            self.cards.append(card)  # append it to the list
+        card_strs = [] # forming an empty list
+        for c in self.cards: # each card in self.cards (the initial list)
+            card_strs.append(c.__str__()) # appends the string that represents that card to the empty list 
+        if card.__str__() not in card_strs: # if the string representing this card is not in the list already
+            self.cards.append(card) # append it to the list,
 
     def sort_cards(self):
         self.cards = []
@@ -64,7 +64,7 @@ class Deck(object):
     def deal_hand(self, hand_size):
         hand_cards = []
         for i in range(hand_size):
-            hand_cards.append(self.pop_card(i))
+            hand_cards.append(self.pop_card()) 
         return hand_cards
 
 
